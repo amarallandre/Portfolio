@@ -1,0 +1,76 @@
+{% extends 'main.html' %} {% load static %} {% block conteudo %}
+<div class="card">
+  <div onclick="openPopup('popup1')">
+    <img
+      src="{% static 'img/projeto1.jpg' %}"
+      alt="Projeto 1"
+      class="project-image"
+    />
+  </div>
+  <div class="card-info">
+    <h2>Oficina</h2>
+    <p>
+      No projeto foi utilizado o Python com a biblioteca Tkinter e o banco de
+      dados MySQL.
+    </p>
+    <p>
+      Simula o registro de um carro em uma oficina, contém desde a parte do
+      cadastro até a parte do status de um serviço.
+    </p>
+    <p>
+      Link do repositório:
+      <a href="https://github.com/amarallandre/Oficina" target="_blank"
+        >Oficina</a
+      >
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <div onclick="openPopup('popup2')">
+    <img
+      src="{% static 'img/projeto2.png' %}"
+      alt="Projeto 2"
+      class="project-image2"
+    />
+  </div>
+  <div class="card-info">
+    <h2>Chatbot</h2>
+    <p>
+      Ele foi desenvolvido com python e foi utilizada a api do telegram para
+      poder fazer a conexão com o bot do telegram.
+    </p>
+    <p>
+      O código reconhece um bot criado no Telegram e utiliza-o como repasse de
+      mensagens no estilo dos sinais da IQ Option. Ele pega uma lista de sinais
+      criada manualmente e repassa cada sinal da lista na sua respectiva hora
+      para um grupo específico.
+    </p>
+    <p>
+      Link do repositório:
+      <a href="https://github.com/amarallandre/Chatbot/" target="_blank"
+        >Chatbot</a
+      >
+    </p>
+  </div>
+</div>
+
+<div class="popup" id="popup1" onclick="closePopup('popup1')">
+  <span class="close" onclick="closePopup('popup1')">&times;</span>
+  <img
+    src="{% static 'img/projeto1.jpg' %}"
+    alt="Projeto 1"
+    class="popup-image"
+  />
+</div>
+
+<div class="popup2" id="popup2" onclick="closePopup('popup2')">
+  <span class="close" onclick="closePopup('popup2')">&times;</span>
+  <img
+    src="{% static 'img/projeto2.png' %}"
+    alt="Projeto 2"
+    class="popup-image2"
+  />
+</div>
+
+{% endblock %}

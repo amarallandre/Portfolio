@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André Nascimento</title>
+    <!-- Aqui você pode adicionar links para seus arquivos CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <!-- Aqui vem o conteúdo da sua página -->
+    <header>
+      <nav>
+        <ul>
+          <a href="{% url 'about' %}">Sobre</a>
+          <a href="{% url 'portfolio' %}">Portfólio</a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>{% block conteudo %}{% endblock %}</main>
+
+    <footer>
+      <!-- O rodapé da sua página, com links úteis, informações de contato, direitos autorais, etc. -->
+      <p>&copy; Andre Nascimento</p>
+    </footer>
+
+    <!-- Aqui você pode adicionar links para seus arquivos JavaScript -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+  </body>
+</html>
